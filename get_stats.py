@@ -2,10 +2,7 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 
 # Enter A url
-url = "https://www.flashscore.com/match/UuEjwOGt/#/match-summary/match-statistics/0"
-
-# Create a new ChromeDriver instance
-driver = webdriver.Chrome('C:/Users/DELL/Desktop/chromedriver/chromedriver')
+url = "Some URL"
 # Navigate to the webpage
 driver.get(url)
 
@@ -15,7 +12,7 @@ html = driver.page_source
 # Parse the HTML content using BeautifulSoup
 soup = BeautifulSoup(html, 'html.parser')
 
-# Find all <strong> tags
+# Find all <strong> tags(Data are stored in <strong> tag ) 
 strong_tags = soup.find_all('strong')
 
 # Extract and print the contents within the <strong> tags
